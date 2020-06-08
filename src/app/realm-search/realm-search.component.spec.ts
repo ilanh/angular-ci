@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { RealmSearchComponent } from './realm-search.component';
 
 describe('RealmSearchComponent', () => {
@@ -8,7 +8,8 @@ describe('RealmSearchComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RealmSearchComponent ]
+      declarations: [ RealmSearchComponent ],
+      imports: [HttpClientTestingModule]
     })
     .compileComponents();
   }));

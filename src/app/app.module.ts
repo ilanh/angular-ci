@@ -16,6 +16,7 @@ import { RealmDetailComponent } from './realm-detail/realm-detail.component';
 
 import { MessageComponent } from './message/message.component';
 import { RealmSearchComponent } from './realm-search/realm-search.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { RealmSearchComponent } from './realm-search/realm-search.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    RouterModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
       dataEncapsulation: false,

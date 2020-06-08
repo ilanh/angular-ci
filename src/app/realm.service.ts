@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Realm } from './realm';
-import { REALMS } from './test-realms';
 import { Observable, of } from 'rxjs';
 import { MessageService } from './message.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
