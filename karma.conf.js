@@ -7,10 +7,10 @@ module.exports = function (config) {
     frameworks: ['jasmine', '@angular-devkit/build-angular'],
     browsers: ['Chrome'],
     customLaunchers: {
-      ChromeNoSandbox: {
-        base: 'Chrome',
-        flags: ['--no-sandbox']
-        }
+      ChromeHeadlessCI: {
+          base: 'ChromeHeadless',
+          flags: ['--no-sandbox']
+      }
     },
     plugins: [
       require('karma-jasmine'),
