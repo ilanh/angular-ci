@@ -1,0 +1,19 @@
+<h2>Realmes List</h2>
+<div>
+  <label>Realm name:
+    <input #realmName />
+  </label>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="add(realmName.value); realmName.value=''">
+    add
+  </button>
+</div>
+<ul class="realms">
+  <li *ngFor="let realm of realms">
+    <a routerLink="/detail/{{realm.id}}">
+      <span class="badge">{{realm.id}}</span> {{realm.name}}
+    </a>
+    <button class="delete" title="delete realm"
+      (click)="delete(realm)">x</button>
+  </li>
+</ul>

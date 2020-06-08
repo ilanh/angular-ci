@@ -1,0 +1,10 @@
+<h3>Realms</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let realm of realms" class="col-1-4"
+      routerLink="/detail/{{realm.id}}">
+    <div class="module realm">
+      <h4>{{realm.name}}</h4>
+    </div>
+  </a>
+</div>
+<app-realm-search></app-realm-search>
