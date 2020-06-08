@@ -13,8 +13,6 @@ jobs:
           key: angular-ci-{{ .Branch }}-{{ checksum "package.json" }}
           paths:
             - "node_modules"
-  test:
-    steps:
       - run: xvfb-run -a npm run test-headless
       - run: xvfb-run -a npm run e2e
       
