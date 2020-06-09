@@ -22,18 +22,17 @@ module.exports = function (config) {
     client: {
       clearContext: false // leave Jasmine Spec Runner output visible in browser
     },
-    reporters: ['junit'],  
-    junitReporter: {
-      outputDir: process.env.JUNIT_REPORT_PATH,
-      outputFile: process.env.JUNIT_REPORT_NAME,
-      useBrowserName: false
-    },
     coverageIstanbulReporter: {
       dir: require('path').join(__dirname, './coverage/angular-lifecycle'),
       reports: ['html', 'lcovonly', 'text-summary'],
       fixWebpackSourcePaths: true
     },
-    reporters: ['progress', 'kjhtml'],
+    reporters: ['progress', 'kjhtml', 'junit'],
+    junitReporter: {
+      outputDir: process.env.JUNIT_REPORT_PATH,
+      outputFile: process.env.JUNIT_REPORT_NAME,
+      useBrowserName: false
+    },
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,

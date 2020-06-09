@@ -20,14 +20,21 @@ jobs:
       - checkout
       - restore_cache:
           key: angular-ci-{{ .Branch }}-{{ checksum "package.json" }}
-      - run: xvfb-run -a npm run e2e
       - run: mkdir ~/junit
       - run:
           command: xvfb-run -a npm run test-headless
+          name: ng headless tests
           environment:
             JUNIT_REPORT_PATH: ./junit/
             JUNIT_REPORT_NAME: test-results.xml
           when: always  
+      - run:
+          command: xvfb-run -a npm run e2e
+          name: ng e2e tests
+          environment:
+            JUNIT_REPORT_PATH: ./junit/
+            JUNIT_REPORT_NAME: test-results.xml
+          when: always
       - store_test_results:
           path: ./junit
       - store_artifacts:
