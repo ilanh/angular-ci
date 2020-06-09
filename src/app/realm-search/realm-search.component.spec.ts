@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { RealmSearchComponent } from './realm-search.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('RealmSearchComponent', () => {
   let component: RealmSearchComponent;
@@ -9,7 +10,8 @@ describe('RealmSearchComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ RealmSearchComponent ],
-      imports: [HttpClientTestingModule]
+      imports: [ HttpClientTestingModule ],
+      schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
     })
     .compileComponents();
   }));
