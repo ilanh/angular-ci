@@ -1,6 +1,7 @@
 # AngularLifecycle
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
+Circle-CI pipeline:  
+[![ilanh](https://circleci.com/gh/ilanh/angular-ci.svg?style=svg)](https://app.circleci.com/pipelines/github/ilanh/angular-ci)  
 
 ## Development server
 
